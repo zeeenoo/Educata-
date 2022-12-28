@@ -123,6 +123,56 @@ def contactDelete(request, pk):
         return Response('Item succsesfully delete!')
 
 
+############################################
+
+#views for lieu
+
+# to show all the lieus
+@api_view(['GET'])
+def lieusList(request):
+        lieus = Lieu.objects.all()
+        serializer = LieuSerializer(lieus, many=True)
+        return Response(serializer.data)
+
+# to show a single lieu
+
+@api_view(['GET'])
+def lieuDetail(request, pk):
+        lieus = Lieu.objects.get(id=pk)
+        serializer = LieuSerializer(lieus, many=False)
+        return Response(serializer.data)
+
+
+# to create a lieu
+@api_view(['POST'])
+def lieuCreate(request):
+        serializer = LieuSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)
+
+
+
+# to update a lieu
+@api_view(['POST'])
+def lieuUpdate(request, pk):
+        lieu = Lieu.objects.get(id=pk)
+        serializer = LieuSerializer(instance=lieu, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)
+
+
+# to delete a lieu
+
+@api_view(['DELETE'])
+def lieuDelete(request, pk):
+        lieu = Lieu.objects.get(id=pk)
+        lieu.delete()
+        return Response('Item succsesfully delete!')
+
+
+
 
 
 

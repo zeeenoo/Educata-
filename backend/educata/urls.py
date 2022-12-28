@@ -12,6 +12,14 @@ urlpatterns = [
     path('contact-create/', views.contactCreate, name="contact-create"),
     path('contact-update/<str:pk>/', views.contactUpdate, name="contact-update"),
     path('contact-delete/<str:pk>/', views.contactDelete, name="contact-delete"),
+    path('lieu-list/', views.lieusList, name="lieu-list"),
+    path('lieu-detail/<str:pk>/', views.lieuDetail, name="lieu-detail"),
+    path('lieu-create/', views.lieuCreate, name="lieu-create"),
+    path('lieu-update/<str:pk>/', views.lieuUpdate, name="lieu-update"),
+    path('lieu-delete/<str:pk>/', views.lieuDelete, name="lieu-delete"),
+
+
+
 
     
 

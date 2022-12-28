@@ -40,7 +40,7 @@ class Lieu(models.Model):
     adresse = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.id
+        return str(self.wilaya)
 
 class User(models.Model):
     id = models.AutoField(primary_key=True)
@@ -49,12 +49,13 @@ class User(models.Model):
     password = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
     telephone = models.CharField(max_length=200)
-    lieu = models.ForeignKey(Lieu, on_delete=models.CASCADE)   
+
+    lieu = models.ForeignKey(Lieu, on_delete=models.CASCADE  )   
     isTeacher = models.BooleanField 
     photo = models.ImageField(upload_to='Images/Users')
 
     def __str__(self):
-        return self.id
+        return str(self.firstName+ self.lastName)
 
 #class contact inherits from user
 class Contact(models.Model):
@@ -65,7 +66,7 @@ class Contact(models.Model):
     dateUpdated = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.id
+        return str(self.user)
 
 
 
@@ -80,7 +81,7 @@ class Annonce(models.Model):
     description = models.CharField(max_length=200)
     tarif = models.IntegerField()
     contact = models.ForeignKey(Contact, on_delete=models.CASCADE)
-    lieu = models.ForeignKey(Lieu, on_delete=models.CASCADE)
+    lieu = models.ForeignKey(Lieu, on_delete=models.CASCADE )
     #date of creation
     dateCreated = models.DateTimeField(auto_now_add=True)
     dateUpdated = models.DateTimeField(auto_now_add=True)
@@ -88,7 +89,7 @@ class Annonce(models.Model):
     photo = models.ImageField(upload_to='images/Announces/${id}')
 
     def __str__(self):
-        return self.id
+        return str(self.id)
 
 
 
