@@ -19,7 +19,7 @@ function NavBar(props) {
           <div className='h-4 w-4 absolute -top-2 right-4 rotate-45 bg-[#E8E8F6] border-t-2 border-l-2 border-gray-400'></div>
           <ul className=''>
               {props.data.map((item)=>(
-                  <li className='p-2 mr-8'><a href='#' className=''>{item}</a></li>
+                  <li className='p-2 mr-8 text-[12px] xs:text-[15px]'><a href='#' className=''>{item}</a></li>
               ))}  
           </ul>
         </div>
