@@ -1,13 +1,14 @@
-import {NavBar, Footer, Card} from "./components";
-import { navbarData, footerData, cardData } from "./const/const";
+
+import { Routes,  Route, Navigate} from "react-router-dom";
+import Home from "./Views/Home";
+
 
 function App() {
   return (
-    <div className="App">
-      <NavBar data={navbarData}/>
-      {/* <Card data={cardData}/> */}
-      <Footer data={footerData}/>
-    </div>
+    <Routes>
+      <Route path="/" element = {<Home/>}/>
+      <Route path="*" element={<Navigate to="/" replace />}/>
+    </Routes>
   );
 }
 
