@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavBar, Footer, Card} from "../components";
 import { navbarData, footerData } from "../const/const";
-import { mainImage, pic2 } from '../assets';
+import { mainImage, pic2, pic3, pic4 } from '../assets';
 import {FaSearch} from "react-icons/fa"
 import { cardData } from '../const/const';
 
@@ -43,6 +43,17 @@ function Home() {
                 </div>
             </section>
 
+            <section>
+                <img src={pic3} alt="" className='rounded-[50px] max-h-[500px] w-full xs:mb-16 mb-6'/>
+                <div className='sm:flex mb-16 px-4'>
+                    <div className='max-w-[600px] mr-auto'>
+                        <h2 className='font-bold sm:text-[40px] text-[25px]'>Find your best Class to attend</h2>
+                        <p className='mb-4 sm:text-[20px] text-[15px]'>We provide a complete service for finding the best clqss to attend</p>
+                        <button className='bg-[#242145] py-2 px-4 rounded-[20px] text-white mb-6'>Contact us</button>
+                    </div>
+                    <img src={pic4} alt="pic" className='sm:h-[300px] m-auto sm:w-[400px] xs:w-[400px] w-[250px] rounded-[50px] sm:ml-2'/>
+                </div>
+            </section>
 
         </div>
         <Footer data={footerData}/>

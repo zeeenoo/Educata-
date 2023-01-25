@@ -6,8 +6,8 @@ import { GrLinkedin } from "react-icons/gr";
 
 function Footer(props) {
   return (
-    <footer className='bg-[#E8E8F6] w-screen'>
-      <div className='max-w-[1200px] mx-auto sm:flex w-screen xs:p-4'>
+    <footer className='bg-[#E8E8F6]'>
+      <div className='max-w-[1200px] mx-auto sm:flex xs:p-4'>
         <div className='max-w-[300px] sm:mr-auto mx-auto xs:mb-8 mb-4 p-2'>
           <h1 className='py-2 mr-auto font-bold text-[20px]'>Educata</h1>
           <p className='xs:text-[15px] text-[12px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam labore quod modi </p>
