@@ -5,7 +5,7 @@ import {GrClose} from "react-icons/gr"
 function NavBar(props) {
   const [show, setShow] = React.useState(false)
   return (
-    <div className='flex p-2 relative'>
+    <nav className='flex p-2 relative mb-8'>
         <h1 className='p-2 mr-auto font-bold'>Educata</h1>
         <ul className='sm:flex hidden'>
             {props.data.map((item)=>(
@@ -23,7 +23,7 @@ function NavBar(props) {
               ))}  
           </ul>
         </div>
-    </div>
+    </nav>
   )
 }
 
