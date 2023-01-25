@@ -5,7 +5,7 @@ import {GrClose} from "react-icons/gr"
 function NavBar(props) {
   const [show, setShow] = React.useState(false)
   return (
-    <nav className='flex p-2 relative mb-8'>
+    <nav className='flex p-2 relative sm:mb-8 mb-4'>
         <h1 className='p-2 mr-auto font-bold'>Educata</h1>
         <ul className='sm:flex hidden'>
             {props.data.map((item)=>(
