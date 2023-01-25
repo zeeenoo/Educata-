@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <NavBar data={navbarData}/>
-      <Card data={cardData}/>
+      {/* <Card data={cardData}/> */}
       <Footer data={footerData}/>
     </div>
   );
