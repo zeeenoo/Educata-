@@ -13,10 +13,10 @@ function NavBar(props) {
             ))}  
         </ul>
         <ImMenu className={`${show? 'hidden': 'block'} sm:hidden mr-2 cursor-pointer`} size={30} onClick={()=> setShow(!show)}/>
-        <GrClose className={`${show? 'block': 'hidden'} mr-2 cursor-pointer`} size={30} onClick={()=> setShow(!show)}/>
+        <GrClose className={`${show? 'block': 'hidden'} sm:hidden mr-2 cursor-pointer`} size={30} onClick={()=> setShow(!show)}/>
             
-        <div className={`${show? 'block': 'hidden'} absolute top-full right-1 w-fit bg-[#E8E8F6] p-1 rounded-[10px]`}>
-          <div className='h-4 w-4 absolute -top-2 right-4 rotate-45 bg-[#E8E8F6]'></div>
+        <div className={`${show? 'block': 'hidden'} sm:hidden z-20 border-2 border-gray-400 absolute top-full right-1 w-fit bg-[#E8E8F6] p-1 rounded-[10px]`}>
+          <div className='h-4 w-4 absolute -top-2 right-4 rotate-45 bg-[#E8E8F6] border-t-2 border-l-2 border-gray-400'></div>
           <ul className=''>
               {props.data.map((item)=>(
                   <li className='p-2 mr-8'><a href='#' className=''>{item}</a></li>
