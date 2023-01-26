@@ -26,7 +26,7 @@ function Filter() {
     }
 
   return (
-    <div className='w-[200px] mb-8'>
+    <div className='w-[200px] mb-8 md:block hidden'>
         <div className='mb-4'>
             <h2 className='font-bold text-[18px] mb-2'>{filterData[0].name}</h2>
             <hr className='mb-2 border-[1px] border-gray-400'/>
