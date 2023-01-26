@@ -35,3 +35,24 @@ export const cardData = {
     profilName: "Nour eddine",
     profilImg: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
 }
+
+export const filterData = [
+    {
+        name: "Niveau",
+        items: [
+            "primaire", "CEM", "Lycee"
+        ]
+    },
+    {
+        name: "Type",
+        items: [
+            "Online", "Offline"
+        ]
+    },
+    {
+        name: "Subjects",
+        items: [
+            "Math", "Pysique", "Science", "Histoire Geo", "Islamique"
+        ]
+    }
+]
