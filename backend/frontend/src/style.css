@@ -10,3 +10,8 @@
     margin: 0;
     font-family: 'Anek Latin', sans-serif;
 }
+
+.animate-bounce{
+    animation: bounce 1s both;
+}	
+

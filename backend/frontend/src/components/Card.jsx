@@ -1,6 +1,9 @@
 import React from 'react'
+import {BsBookmark} from "react-icons/bs"
+import {BsBookmarkFill} from "react-icons/bs"
 
 function Card(props) {
+  const [isSaved, setIsSaved] = React.useState(false)
   return (
     <div className='xs:flex rounded-[20px] shadow-lg p-4 max-w-[1000px] mb-4'>
         <img src={props.data.mainimg} alt="" className='rounded-[10px] md:w-[250px] sm:w-[180px] mr-[30px] hidden sm:block'/>
@@ -26,6 +29,8 @@ function Card(props) {
           <img src={props.data.profilImg} alt=""  className='rounded-[20px] w-[100px] mb-4'/>
           <h1 className=' text-[20px] font-bold'>{props.data.profilName}</h1>
         </div>
+        <BsBookmark size={30} className={`${isSaved? "hidden": 'block'} cursor-pointer`} onClick={()=>setIsSaved(!isSaved)}/>
+        <BsBookmarkFill size={30} className={`${isSaved? "block animate-bounce": 'hidden'} cursor-pointer`} onClick={()=>setIsSaved(!isSaved)}/>
     </div>
   )
 }

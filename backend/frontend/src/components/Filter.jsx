@@ -46,7 +46,7 @@ function Filter(props) {
             {
                 filterData[1].items.map(item=>(
                     <div>
-                        <input type="radio" name='niveau' id={item} onChange={handleChange} value={item}/>
+                        <input type="radio" name='type' id={item} onChange={handleChange} value={item}/>
                         <label htmlFor={item} className='ml-2'>{item}</label>
                     </div>
                 ))
