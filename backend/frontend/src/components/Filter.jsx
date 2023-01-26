@@ -26,9 +26,10 @@ function Filter() {
     }
 
   return (
-    <div>
+    <div className='w-[200px] mb-8'>
         <div className='mb-4'>
             <h2 className='font-bold text-[18px] mb-2'>{filterData[0].name}</h2>
+            <hr className='mb-2 border-[1px] border-gray-400'/>
             {
                 filterData[0].items.map(item=>(
                     <div>
@@ -41,6 +42,7 @@ function Filter() {
 
         <div className='mb-4'>
             <h2 className='font-bold text-[18px] mb-2'>{filterData[1].name}</h2>
+            <hr className='mb-2 border-[1px] border-gray-400'/>
             {
                 filterData[1].items.map(item=>(
                     <div>
@@ -53,6 +55,7 @@ function Filter() {
 
         <div>
             <h2 className='font-bold text-[18px] mb-2'>{filterData[2].name}</h2>
+            <hr className='mb-2 border-[1px] border-gray-400'/>
             {filterData[2].items.map(item=>(
                 <div>
                     <input type="checkbox" id={item} name={item} onChange={handleChange}/>
