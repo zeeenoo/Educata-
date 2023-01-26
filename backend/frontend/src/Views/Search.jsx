@@ -10,6 +10,7 @@ function Search() {
         setSearchTxt(event.target.value)
     }
   
+    const [isOpen, setIsOpen] = React.useState(false)
     return (
     <div>
         <NavBar data={navbarData}/>
@@ -20,10 +21,10 @@ function Search() {
                 <input type="submit" value="Search" className='bg-[#242145] cursor-pointer active:bg-[#3f3b5e] text-white sm:px-8 px-4 py-2 rounded-[25px]'/>
             </div>
 
-            <div className='flex mb-[100px]'>
-                <Filter/>
+            <div className='flex mb-[100px] relative'>
+                <Filter isOpen={isOpen}/>
                 <div className='sm:mx-8 w-full'>
-                    <div className='flex items-center cursor-pointer border-[#242145] border-2 w-fit p-2 rounded-2xl md:hidden mb-2'>
+                    <div className='flex items-center cursor-pointer border-[#242145] border-2 w-fit p-2 rounded-2xl md:hidden mb-2' onClick={()=> setIsOpen(!isOpen)}>
                         <IoFilter size={25} className='mr-4'/>
                         <p className='text-[20px]'>Filter</p>
                     </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { filterData } from '../const/const'
 
-function Filter() {
+function Filter(props) {
     const [filterdata, setFilterData] = React.useState({
         niveau: "",
         type: "",
@@ -26,7 +26,7 @@ function Filter() {
     }
 
   return (
-    <div className='w-[200px] mb-8 md:block hidden'>
+    <div className={`${props.isOpen? "": "hidden"} w-[200px] mb-8 md:block md:relative md:top-0 md:left-0 absolute top-14 left-5 md:border-0 border-2 border-[#242145] bg-white md:p-0 p-4 md:rounded-none rounded-lg`}>
         <div className='mb-4'>
             <h2 className='font-bold text-[18px] mb-2'>{filterData[0].name}</h2>
             <hr className='mb-2 border-[1px] border-gray-400'/>
