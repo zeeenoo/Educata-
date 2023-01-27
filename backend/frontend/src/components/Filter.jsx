@@ -10,7 +10,6 @@ function Filter(props) {
 
     function handleChange(event){
         const {name, value, type} = event.target
-        console.log(filterdata)
         setFilterData(prevFilterData => {
             if(type === "checkbox"){
                 return{...prevFilterData,

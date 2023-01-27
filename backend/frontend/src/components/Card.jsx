@@ -10,7 +10,11 @@ function Card(props) {
         <div className='xs:mr-auto '>
           <div className='xs:hidden flex items-center'>
             <img src={props.data.profilImg} alt="" className='rounded-[20px] w-[40px] mb-2 mr-4'/>
-            <h3 className='font-bold text-[18px]'>{props.data.profilName}</h3>
+            <h3 className='font-bold text-[18px] mr-auto'>{props.data.profilName}</h3>
+            <div className='xs:hidden'>
+              <BsBookmark size={30} className={`${isSaved? "hidden": 'block'} cursor-pointer`} onClick={()=>setIsSaved(!isSaved)}/>
+              <BsBookmarkFill size={30} className={`${isSaved? "block animate-bounce": 'hidden'} cursor-pointer`} onClick={()=>setIsSaved(!isSaved)}/>
+            </div>
           </div>
           <h1 className='font-bold md:text-[30px] xs:text-[25px] text-[20px]'>{props.data.title}</h1>
           <p className='text-[13px] mb-4'>{props.data.description}</p>
@@ -29,8 +33,10 @@ function Card(props) {
           <img src={props.data.profilImg} alt=""  className='rounded-[20px] w-[100px] mb-4'/>
           <h1 className=' text-[20px] font-bold'>{props.data.profilName}</h1>
         </div>
-        <BsBookmark size={30} className={`${isSaved? "hidden": 'block'} cursor-pointer`} onClick={()=>setIsSaved(!isSaved)}/>
-        <BsBookmarkFill size={30} className={`${isSaved? "block animate-bounce": 'hidden'} cursor-pointer`} onClick={()=>setIsSaved(!isSaved)}/>
+        <div className='hidden xs:block'>
+          <BsBookmark size={30} className={`${isSaved? "hidden": 'block'} cursor-pointer`} onClick={()=>setIsSaved(!isSaved)}/>
+          <BsBookmarkFill size={30} className={`${isSaved? "block animate-bounce": 'hidden'} cursor-pointer`} onClick={()=>setIsSaved(!isSaved)}/>
+        </div>
     </div>
   )
 }
