@@ -12,7 +12,7 @@ function Signin() {
 
   function handleChange(event){
     const {name, value} = event.target
-    setShowsignup(prevFilterData => {
+    setSignupData(prevFilterData => {
         return {
             ...prevFilterData,
             [name]: value
@@ -54,24 +54,24 @@ function Signin() {
                     <div className='flex w-full'>
                         <div className='mr-4 flex-1'>
                             <label for="firstname" className="mb-2 text-[20px] font-medium">First Name</label>
-                            <input type="text" name="firstname" id="firstname" onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-4" placeholder="First Name" required/>
+                            <input type="text" name="firstname" value={signupData.firstname} id="firstname" onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-4" placeholder="First Name" required/>
                         </div>
                         <div className='flex-1'>
                             <label for="lastname" className="mb-2 text-[20px] font-medium">Last Name</label>
-                            <input type="text" name="lastname" id="lastname" onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-4" placeholder="Last Name" required/>
+                            <input type="text" value={signupData.lastname} name="lastname" id="lastname" onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-4" placeholder="Last Name" required/>
                         </div>
                     </div>
                     <div>
                         <label for="phone" className="mb-2 text-[20px] font-medium">phone number</label>
-                        <input type="email" name="phone" id="phone" onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-4" placeholder="+213 **********" required/>
+                        <input type="text" name="phone" id="phone" value={signupData.phone} onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-4" placeholder="+213 **********" required/>
                     </div>
                     <div>
                         <label for="email" className="mb-2 text-[20px] font-medium">Your email</label>
-                        <input type="email" name="email" id="email" onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-4" placeholder="name@company.com" required/>
+                        <input type="email" name="email" id="email" value={signupData.email} onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-4" placeholder="name@company.com" required/>
                     </div>
                     <div>
                         <label for="password" className="mb-2 text-[20px] font-medium">Your password</label>
-                        <input type="password" name="password" id="password" onChange={handleChange} placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-6" required/>
+                        <input type="password" name="password" id="password" value={signupData.password} onChange={handleChange} placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-6" required/>
                     </div>
                     <div className="xs:flex justify-between mb-4 xs:px-4">
                         <div className="flex items-start">

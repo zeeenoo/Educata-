@@ -2,6 +2,22 @@ import React from 'react'
 
 function Signin() {
   const [showModal, setShowModal] = React.useState(false);
+  const [signinData, setSigninData] = React.useState({
+    email: "",
+    password: ""
+  })
+
+
+  function handleChange(event){
+    const {name, value} = event.target
+    setSigninData(prevFilterData => {
+        return {
+            ...prevFilterData,
+            [name]: value
+        }
+
+    })
+}
   return (
     <>
       <button
@@ -34,11 +50,11 @@ function Signin() {
                 <form className="">
                     <div>
                         <label for="email" className="mb-2 text-[20px] font-medium">Your email</label>
-                        <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-4" placeholder="name@company.com" required/>
+                        <input type="email" name="email" id="email" value={signinData.email} onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-4" placeholder="name@company.com" required/>
                     </div>
                     <div>
                         <label for="password" className="mb-2 text-[20px] font-medium">Your password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-6" required/>
+                        <input type="password" name="password" id="password" value={signinData.password} onChange={handleChange} placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-6" required/>
                     </div>
                     <div className="xs:flex justify-between mb-4 xs:px-4">
                         <div className="flex items-start">
