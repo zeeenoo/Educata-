@@ -4,6 +4,7 @@ import { navbarData, footerData } from "../const/const";
 import { mainImage, pic2, pic3, pic4 } from '../assets';
 import {FaSearch} from "react-icons/fa"
 import { cardData } from '../const/const';
+import { Link } from "react-router-dom";
 
 function Home() {
     const backgroundstyle = {
@@ -18,7 +19,7 @@ function Home() {
             <section className='sm:py-[100px] sm:px-10 xs:px-6 xs:py-12 px-6 py-6 xs:mb-16 mb-6' style={backgroundstyle}>
                 <h1 className='xl:text-[70px] sm:text-[4vw] xs:text-[30px] text-[20px] font-bold text-[#110229]'>Easy way to find a <br /> perfect teacher</h1>
                 <h3 className='xl:text-[35px] sm:text-[2vw] xs:text-[20px] text-[12px] text-white sm:mb-12 mb-8'>We provide a complete service for the find,<br /> Lorem Ipsumq jqbcuqekjlzanxja</h3>
-                <button className='sm:text-[30px] xs:text-[20px] text-[10px] font-bold flex sm:w-[200px] xs:w-[150px] w-[70px] items-center backdrop-blur-md border-2 border-gray-500 rounded-[15px] sm:px-4 px-1 sm:py-2 py-1 text-[#110229]'><FaSearch className='xs:mr-4 mr-2'/>Search</button>
+                <Link to="/search"><button className='sm:text-[30px] xs:text-[20px] text-[10px] font-bold flex sm:w-[200px] xs:w-[150px] w-[70px] items-center backdrop-blur-md border-2 border-gray-500 rounded-[15px] sm:px-4 px-1 sm:py-2 py-1 text-[#110229]'><FaSearch className='xs:mr-4 mr-2'/>Search</button></Link>
             </section>
 
             <section className='sm:flex mb-16 px-4'>
@@ -33,7 +34,7 @@ function Home() {
             <section className='mb-16'>
                 <div className='flex items-center'>
                     <h2 className='xs:text-[40px] text-[20px] text-[#110229] mr-auto'>Recently Added</h2>
-                    <div className='inline xs:text-[20px] text-[15px] text-blue-700 hover:underline'><a href="#">See all</a></div>
+                    <div className='inline xs:text-[20px] text-[15px] text-blue-700 hover:underline'><Link to="/search">See all</Link></div>
                 </div>
                 <div className='mx-auto'>
                     <Card data={cardData}/>

@@ -19,13 +19,23 @@ from django.views.generic import TemplateView
 from educata import views
 from rest_framework import routers
 
+
+
+
 router = routers.DefaultRouter()
+# router.register(r'annonce', AnnonceViewSet, basename='annonce')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('educata.urls')),
     path('',TemplateView.as_view(template_name= 'index.html')),
     path('accounts/', include('allauth.urls')),
+    # path('api-overview/', apiOverview, name='api-overview'),
+    # path('api-token-auth/', obtain_jwt_token),
+    # path('api-token-refresh/', refresh_jwt_token),
+    # path('api-token-verify/', verify_jwt_token),
+
+
 
 
 ]
