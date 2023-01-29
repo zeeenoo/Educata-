@@ -1,4 +1,5 @@
 import React from 'react'
+import GoogleAuthButton from './GoogleLogin';
 
 function Signin() {
   const [showModal, setShowModal] = React.useState(false);
@@ -55,6 +56,9 @@ function Signin() {
                     <div>
                         <label for="password" className="mb-2 text-[20px] font-medium">Your password</label>
                         <input type="password" name="password" id="password" value={signinData.password} onChange={handleChange} placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-6" required/>
+                    </div>
+                    <div>
+                      <GoogleAuthButton/>
                     </div>
                     <div className="xs:flex justify-between mb-4 xs:px-4">
                         <div className="flex items-start">
